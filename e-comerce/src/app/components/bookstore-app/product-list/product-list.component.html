@@ -1,1 +1,18 @@
-<p>product-list works!</p>
+<h2 class="text-center">Livros</h2>
+<div class = "container">
+<div class="d-flex flex-wrap">
+    <div *ngFor=" let books of book">
+    <div class="card" style="width: 16rem; margin: 10px;">
+        <img [src]="books.img" class="card-img-top" height="380" >
+        <div class="card-body">
+            <h4 class=list-gorup-item>{{books.name}}</h4>
+            <hr>
+            <h5 class=list-gorup-item>R$<span class="h3">{{books.price}}</span> </h5>
+            <p class=list-gorup-item>Qtd: {{books.quantity }}</p>
+            <p class=list-gorup-item>Gênero: {{books.category}}</p>
+            <button type="button" class="btn btn-primary">Comprar</button>
+        </div>
+    </div>
+</div>
+</div>
+</div>
